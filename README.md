@@ -104,6 +104,7 @@ lib/gen_l10n/app_localizations_zh.dart
 ## 🧩 MaterialApp 語系設定範例
 ```
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'l10n/app_localizations.dart';
 
 MaterialApp(
   supportedLocales: const [

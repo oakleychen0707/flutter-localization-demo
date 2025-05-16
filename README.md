@@ -86,9 +86,18 @@ flutter:
 ```
 
 ### 3️⃣ 執行產生語系類別
+
 ```
 flutter gen-l10n
 ```
+
+這個指令會根據你在 `lib/l10n/` 裡的 `.arb` 檔案，自動產生相關檔案：
+
+lib/gen_l10n/app_localizations.dart
+
+lib/gen_l10n/app_localizations_en.dart
+
+lib/gen_l10n/app_localizations_zh.dart
 
 ---
 

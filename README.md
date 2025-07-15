@@ -1,7 +1,5 @@
 # flutter-localization-demo
 
-# 🌐 Flutter 多語系 (Localization) Demo
-
 這是一個實作 Flutter 多語系功能的範例專案，支援英文、繁體中文、簡體中文，並根據使用者的系統語言自動顯示對應翻譯。
 ⚠️ 本專案使用 Flutter 3.16+（支援自動語系產生 `flutter gen-l10n`）
 

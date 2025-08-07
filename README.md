@@ -157,3 +157,26 @@ Text(AppLocalizations.of(context)!.hello)
    - 中文（中國）（會顯示 `app_zh_CN.arb`）
 3. 重新啟動 App，即可看到語言切換效果
 
+---
+
+ ## 🛠️ 產生 untranslated-messages-file
+
+執行 ```flutter gen-l10n``` 時，Flutter 就會比對各語系的 .arb 檔案。
+如果有些 key 在主語系（例如 app_en.arb）中有，但在其他語系（如 app_zh_CN.arb）中找不到，就會自動將這些缺漏寫進 untranslated_messages.txt。
+
+1. 在 Flutter 專案根目錄下（與 pubspec.yaml 同層），建立 l10n.yaml 並加入以下內容：
+
+```
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+untranslated-messages-file: untranslated_messages.txt
+```
+
+- arb-dir: 指定語系檔 .arb 的資料夾位置
+- template-arb-file: 指定英文為主語系檔
+- output-localization-file: 自動產生的 Dart 語系對應檔案
+- untranslated-messages-file: 輸出缺少翻譯的文字清單
+
+之後輸入指令 ```flutter gen-l10n``` 產生語系檔時，如果有缺漏的話，就會自動產生 untranslated_messages.txt 囉！
+

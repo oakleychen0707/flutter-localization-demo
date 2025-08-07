@@ -166,7 +166,7 @@ Text(AppLocalizations.of(context)!.hello)
 
 1. 在 Flutter 專案根目錄下（與 pubspec.yaml 同層），建立 l10n.yaml 並加入以下內容：
 
-```
+```yaml
 arb-dir: lib/l10n
 template-arb-file: app_en.arb
 output-localization-file: app_localizations.dart

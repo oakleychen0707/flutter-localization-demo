@@ -186,7 +186,7 @@ untranslated-messages-file: untranslated_messages.txt
 
  ## 語系字串插值
 
-- 使用 `{variable}` 來表示插值變數，例如：
+- 使用 `{variable}` 來表示插值變數
 
 ### 單一參數
 

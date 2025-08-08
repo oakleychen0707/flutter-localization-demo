@@ -12,6 +12,8 @@
 - ✅ 根據使用者系統語言自動切換
 - ✅ 支援繁體中文 (`zh_TW`) / 簡體中文 (`zh_CN`) / 英文 (`en`)
 - ✅ 自訂 `localeResolutionCallback` 處理 fallback 語系
+- ✅ 自動產生 `untranslated-messages-file`
+- ✅ 額外補充：語系字串插值
 
 ---
 
@@ -180,3 +182,29 @@ untranslated-messages-file: untranslated_messages.txt
 
 之後輸入指令 ```flutter gen-l10n``` 產生語系檔時，如果有缺漏的話，就會自動產生 untranslated_messages.txt 囉！
 
+---
+
+ ## 語系字串插值
+
+- 使用 `{variable}` 來表示插值變數，例如：
+
+```json
+{
+  "selected_file_count": "已選 {count} 個項目",
+  "@selected_file_count": {
+    "description": "顯示已選擇的檔案數量",
+    "placeholders": {
+      "count": {}
+    }
+  }
+}
+```
+
+- placeholders 欄位必須在每個使用插值的語系檔中定義，告知語系生成器該字串有變數參數。
+- 變數名稱（如 count）需與字串中的 {count} 一致。
+
+## ✅ 使用方法
+
+```
+AppLocalizations.of(context)!.selected_file_count(5)
+```

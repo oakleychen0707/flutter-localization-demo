@@ -188,23 +188,41 @@ untranslated-messages-file: untranslated_messages.txt
 
 - 使用 `{variable}` 來表示插值變數，例如：
 
+#### 單一參數
+
 ```json
-{
-  "selected_file_count": "已選 {count} 個項目",
+"selected_file_count": "已選 {count} 個項目",
   "@selected_file_count": {
     "description": "顯示已選擇的檔案數量",
     "placeholders": {
       "count": {}
     }
   }
-}
 ```
 
 - placeholders 欄位必須在每個使用插值的語系檔中定義，告知語系生成器該字串有變數參數。
 - 變數名稱（如 count）需與字串中的 {count} 一致。
 
-## ✅ 使用方法
+### ✅ 使用方法
 
 ```
 AppLocalizations.of(context)!.selected_file_count(5)
+```
+
+#### 多個參數
+
+```json
+"welcome_message": "Hello {name}, you have {count} messages",
+"@welcome_message": {
+  "placeholders": {
+    "name": {},
+    "count": {}
+  }
+}
+```
+
+### ✅ 使用方法
+
+```
+AppLocalizations.of(context)!.welcome_message("John", 5)
 ```

@@ -188,7 +188,7 @@ untranslated-messages-file: untranslated_messages.txt
 
 - 使用 `{variable}` 來表示插值變數，例如：
 
-#### 單一參數
+### 單一參數
 
 ```json
 "selected_file_count": "已選 {count} 個項目",
@@ -209,7 +209,7 @@ untranslated-messages-file: untranslated_messages.txt
 AppLocalizations.of(context)!.selected_file_count(5)
 ```
 
-#### 多個參數
+### 多個參數
 
 ```json
 "welcome_message": "Hello {name}, you have {count} messages",
